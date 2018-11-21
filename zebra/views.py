@@ -4,7 +4,7 @@ try:
 except:
     from django.utils import simplejson
     
-from django.db.models import get_model
+from django.apps.apps import get_model
 import stripe
 from zebra.conf import options
 from zebra.signals import *
