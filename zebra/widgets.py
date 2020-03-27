@@ -25,7 +25,6 @@ class NoNameWidget(object):
         js = ('zebra/card-form.js', 'https://js.stripe.com/v1/')
 
 
-
 class NoNameTextInput(TextInput, NoNameWidget):
 
     def render(self, name, *args, **kwargs):
