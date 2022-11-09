@@ -13,6 +13,9 @@ class StripeCustomer(models.Model, mixins.StripeMixin, mixins.StripeCustomerMixi
     def __unicode__(self):
         return u"%s" % self.stripe_customer_id
 
+    def __str__(self):
+        return self.__unicode__()
+
 
 class StripePlan(models.Model, mixins.StripeMixin, mixins.StripePlanMixin):
     stripe_plan_id = models.CharField(max_length=50, blank=True, null=True)
@@ -22,6 +25,9 @@ class StripePlan(models.Model, mixins.StripeMixin, mixins.StripePlanMixin):
 
     def __unicode__(self):
         return u"%s" % self.stripe_plan_id
+
+    def __str__(self):
+        return self.__unicode__()
 
 
 class StripeSubscription(models.Model, mixins.StripeMixin, mixins.StripeSubscriptionMixin):
